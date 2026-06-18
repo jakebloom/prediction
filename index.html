@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JB Prediction 100</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="JB Prediction 100 home">
+        <span>JB Prediction 100</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" aria-current="page">Index</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="level-panel" aria-labelledby="current-level-label">
+        <div class="section-label" id="current-level-label">Current level</div>
+        <div class="level-row">
+          <h1 id="index-level" class="index-level">--</h1>
+          <span class="level-unit">basis points</span>
+        </div>
+        <dl class="meta-grid" aria-label="Index metadata">
+          <div>
+            <dt>Updated</dt>
+            <dd id="last-updated">--</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="chart-panel" aria-labelledby="history-title">
+        <div class="panel-heading">
+          <div>
+            <div class="section-label">History</div>
+            <h2 id="history-title">Index level in basis points</h2>
+          </div>
+          <button id="refresh-button" class="text-button" type="button">Refresh</button>
+        </div>
+
+        <div id="chart-wrap" class="chart-wrap" role="img" aria-label="Index history chart">
+          <svg id="history-chart" viewBox="0 0 920 370" aria-hidden="true"></svg>
+          <p id="chart-empty" class="empty-state">No index ticks yet.</p>
+        </div>
+
+        <div class="chart-summary">
+          <span id="point-count">--</span>
+          <span id="history-window">--</span>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span id="connection-state" class="connection-state">
+        <span class="status-dot"></span>
+        Loading
+      </span>
+      <span id="last-checked">--</span>
+    </footer>
+  </body>
+</html>
